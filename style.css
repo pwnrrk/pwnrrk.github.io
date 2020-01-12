@@ -8,6 +8,7 @@
 }
 
 body {
+    position: relative;
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -240,3 +241,4 @@ body {
     background: #bb0000;
     color: white;
   }
+
