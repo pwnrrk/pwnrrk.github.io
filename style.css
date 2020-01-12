@@ -1,9 +1,6 @@
 #header {
    width: 100%;
 }
-
-
-
 body {
     position: relative;
     margin: 0;
@@ -115,7 +112,7 @@ body {
     height: 50px;
     background-color: rgb(59, 59, 59);
     text-align: center;
-    margin: 0;
+    margin-bottom: 0;
 }
 #footertxt {
     font-size: 30px;
