@@ -113,7 +113,7 @@ h6 {
     font-size: 5.5rem;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 320px) {
   .masthead {
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-masthead-m.jpg");/*bg master head*/
   }
