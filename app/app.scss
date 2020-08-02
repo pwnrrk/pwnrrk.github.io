@@ -4,6 +4,7 @@
 $pri: #ffffff;
 $sec: #212121;
 $thr:  #16385f;
+$thehover: #2f455f;
 $acc: #9c3b22;
 $font: 'Kanit', sans-serif;
 body{ 
@@ -63,7 +64,25 @@ body{
         color: $pri;
     }
     &:hover{
-        background-color: #00000030;
+        background-color:$thehover;
+        color: $pri;
+    }
+}
+.btn{
+    text-decoration: none;
+    transition: background-color 250ms;
+    color: $pri;
+    background-color: $thehover;
+    padding: 8px;
+    &:hover{
+        background-color: $thr;
+    }
+    width: fit-content;
+    border-radius: 5px;
+}
+.m{
+    &-auto{
+        margin: auto;
     }
 }
 .bnr{
@@ -97,9 +116,9 @@ body{
     display: grid;
     text-align: center;
     background-color: #ffffff90;
+    padding: 16px;
     span{
         font-size: 2em;
-        padding: 16px;
         margin: 8px;
         font-weight: 400;
     }
@@ -160,7 +179,8 @@ body{
     @media(max-width: 500px){
         display: block;
         div{
-            margin: auto;
+            margin: unset;
+            width: 100%;
             text-align: center;
         }
     }
@@ -169,15 +189,13 @@ body{
     width: 100%;
     min-height: 100vh;
 }
-.abt{
+.sect{
     background-color: $pri;
     text-align: center;
     padding: 2em;
     display: grid;
 }
-.skl{
-    @extend .abt;
-}
+
 .stitl{
     font-size: 2em;
     font-weight: 400;
@@ -192,5 +210,32 @@ body{
     background-color: #00000030;
     &:hover{
         background-color: #ffffff90;
+        color: $sec;
     }
 }
+.skal{
+    display: flex;
+}
+.sksb{
+    width: 50%;
+    display: list-item;
+    list-style: none;
+    p{
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+.ic{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    background-color: $thr;
+    border-radius: 50%;
+    position: relative;
+    i{
+        @extend .csc;
+        color: $pri;
+        font-size: 20px;
+    }
+}
+

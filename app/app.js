@@ -5,8 +5,9 @@ function autoScroll(view) {
 function backToTop(){
     window.scrollTo({top:0,behavior:'smooth'});
 }
-var abt = document.getElementById('bg1').offsetTop-50;
-var skl = document.getElementById('bg2').offsetTop-50;
+var abt = document.getElementById('abt').offsetTop-50;
+var skl = document.getElementById('skl').offsetTop-50;
+var prt = document.getElementById('prt').offsetTop-50;
 var hm = document.getElementById('home').offsetTop;
 document.addEventListener('scroll', function () {
     var els = this.querySelectorAll('.mnt-active');
@@ -17,6 +18,9 @@ document.addEventListener('scroll', function () {
         } else if (abt < window.scrollY) {
             el.classList.remove('mnt-active');
             document.getElementById('abmnt').classList.add('mnt-active');
+        }else if (prt < window.scrollY) {
+            el.classList.remove('mnt-active');
+            document.getElementById('prmnt').classList.add('mnt-active');
         }
         else {
             el.classList.remove('mnt-active');

@@ -76,7 +76,29 @@ body {
 }
 
 .mnt:hover, .bttop:hover {
-  background-color: #00000030;
+  background-color: #2f455f;
+  color: #ffffff;
+}
+
+.btn {
+  text-decoration: none;
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms;
+  color: #ffffff;
+  background-color: #2f455f;
+  padding: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #16385f;
+}
+
+.m-auto {
+  margin: auto;
 }
 
 .bnr {
@@ -114,11 +136,11 @@ body {
   display: grid;
   text-align: center;
   background-color: #ffffff90;
+  padding: 16px;
 }
 
 .bnrt span, .enbnr span {
   font-size: 2em;
-  padding: 16px;
   margin: 8px;
   font-weight: 400;
 }
@@ -137,7 +159,7 @@ body {
   font-weight: 400;
 }
 
-.csc {
+.csc, .ic i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -146,7 +168,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  .csc {
+  .csc, .ic i {
     left: 10%;
     right: 10%;
     -webkit-transform: translate(0, -50%);
@@ -198,7 +220,8 @@ body {
     display: block;
   }
   .ftr div {
-    margin: auto;
+    margin: unset;
+    width: 100%;
     text-align: center;
   }
 }
@@ -208,7 +231,7 @@ body {
   min-height: 100vh;
 }
 
-.abt, .skl {
+.sect {
   background-color: #ffffff;
   text-align: center;
   padding: 2em;
@@ -232,5 +255,37 @@ body {
 
 .bttop:hover {
   background-color: #ffffff90;
+  color: #212121;
+}
+
+.skal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sksb {
+  width: 50%;
+  display: list-item;
+  list-style: none;
+}
+
+.sksb p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.ic {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  background-color: #16385f;
+  border-radius: 50%;
+  position: relative;
+}
+
+.ic i {
+  color: #ffffff;
+  font-size: 20px;
 }
 /*# sourceMappingURL=app.css.map */
