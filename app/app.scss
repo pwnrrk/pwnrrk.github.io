@@ -182,6 +182,7 @@ body{
             margin: unset;
             width: 100%;
             text-align: center;
+            padding: unset;
         }
     }
 }
@@ -215,6 +216,10 @@ body{
 }
 .skal{
     display: flex;
+    @media(max-width:500px){
+        display: list-item;
+        list-style: none;
+    }
 }
 .sksb{
     width: 50%;
@@ -223,6 +228,10 @@ body{
     p{
         font-size: 20px;
         font-weight: 400;
+    }
+    @media(max-width: 500px){
+        width: 100%;
+        padding: 16px;
     }
 }
 .ic{
