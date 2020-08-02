@@ -140,7 +140,7 @@ body {
 
 .ftr {
   width: 100%;
-  background-color: #212121;
+  background-color: #16385f;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,16 +148,33 @@ body {
 }
 
 .ftr div {
-  text-align: center;
   padding: 1em;
-  height: 300px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   margin: 4px;
-  vertical-align: middle;
   width: 50%;
+}
+
+.ftr div li {
+  list-style: none;
+}
+
+.ftr div p {
+  font-weight: 400;
 }
 
 .ftr div span a {
   color: #ffffff;
+}
+
+.ftr div a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.ftr-bnr {
+  font-size: 2em;
 }
 
 .ctnr-fl {
@@ -165,14 +182,8 @@ body {
   min-height: 100vh;
 }
 
-.abt {
-  text-align: center;
-  padding: 2em;
-  display: -ms-grid;
-  display: grid;
-}
-
-.skl {
+.abt, .skl {
+  background-color: #ffffff;
   text-align: center;
   padding: 2em;
   display: -ms-grid;

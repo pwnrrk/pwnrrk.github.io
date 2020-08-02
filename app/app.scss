@@ -121,19 +121,30 @@ body{
 }
 .ftr{
     width: 100%;
-    background-color: $sec;
+    background-color: $thr;
     color: $pri;
     display: flex;
     div{
-        text-align: center;
         padding: 1em;
-        height: 300px;
+        height: max-content;
         margin: 4px;
-        vertical-align: middle;
         width: 50%;
+    }
+    div li{
+        list-style: none;
+    }
+    div p{
+        font-weight: 400;
     }
     div span a{
         color: $pri;
+    }
+    div a{
+        text-decoration: none;
+        color: $pri;
+    }
+    &-bnr{
+        font-size: 2em;
     }
 }
 .ctnr-fl{
@@ -141,14 +152,13 @@ body{
     min-height: 100vh;
 }
 .abt{
+    background-color: $pri;
     text-align: center;
     padding: 2em;
     display: grid;
 }
 .skl{
-    text-align: center;
-    padding: 2em;
-    display: grid;
+    @extend .abt;
 }
 .stitl{
     font-size: 2em;

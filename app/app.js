@@ -5,10 +5,10 @@ function autoScroll(view) {
 function backToTop(){
     window.scrollTo({top:0,behavior:'smooth'});
 }
+var abt = document.getElementById('bg1').offsetTop-50;
+var skl = document.getElementById('bg2').offsetTop-50;
+var hm = document.getElementById('home').offsetTop;
 document.addEventListener('scroll', function () {
-    var abt = document.getElementById('abt').getBoundingClientRect().top;
-    var skl = document.getElementById('skl').getBoundingClientRect().top;
-    var hm = document.getElementById('home').getBoundingClientRect().top;
     var els = this.querySelectorAll('.mnt-active');
     [].forEach.call(els, function (el) {
         if (skl < window.scrollY) {
