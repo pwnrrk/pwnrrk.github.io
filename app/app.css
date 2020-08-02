@@ -142,6 +142,22 @@ body {
   width: 100%;
   background-color: #212121;
   color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ftr div {
+  text-align: center;
+  padding: 1em;
+  height: 300px;
+  margin: 4px;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.ftr div span a {
+  color: #ffffff;
 }
 
 .ctnr-fl {
