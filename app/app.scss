@@ -1,11 +1,12 @@
 *{
     box-sizing: border-box;
 }
-$pri: #ffffff;
-$sec: #212121;
-$thr:  #16385f;
-$thehover: #2f455f;
-$acc: #9c3b22;
+$pri: #16385f;
+$sec:#2f455f;
+$thr: #387044;
+$acc: #ca965a;
+$lht: #ffffff;
+$drk: #212121;
 $font: 'Kanit', sans-serif;
 body{ 
     font-weight: 300;
@@ -13,15 +14,15 @@ body{
     height: 100%;
     margin: 0 !important;
     padding: 0 !important;
-    background-color: $pri;
-    color: $sec;
+    background-color: $lht;
+    color: $drk;
     font-family: $font;
     font-weight: 300;
 }
 .nv{
     width: 100%;
-    background-color: $pri;
-    color: $sec;
+    background-color: $lht;
+    color: $drk;
     padding-bottom: 8px;
     position: fixed;
     top: 0;
@@ -44,7 +45,7 @@ body{
     font-weight: 400;
     a{
         text-decoration: none;
-        color: $thr;
+        color: $pri;
     }
 }
 .nvm{
@@ -54,28 +55,28 @@ body{
 }
 .mnt{
     text-decoration: none;
-    color: $sec;
+    color: $drk;
     padding: 8px;
     margin: 1px;
     transition: background-color 250ms;
     border-radius: 5px;
     &-active{
-        background-color: $thr;
-        color: $pri;
+        background-color: $pri;
+        color: $lht;
     }
     &:hover{
-        background-color:$thehover;
-        color: $pri;
+        background-color:$sec;
+        color: $lht;
     }
 }
 .btn{
     text-decoration: none;
     transition: background-color 250ms;
-    color: $pri;
-    background-color: $thehover;
+    color: $lht;
+    background-color: $sec;
     padding: 8px;
     &:hover{
-        background-color: $thr;
+        background-color: $pri;
     }
     width: fit-content;
     border-radius: 5px;
@@ -151,8 +152,8 @@ body{
 }
 .ftr{
     width: 100%;
-    background-color: $thr;
-    color: $pri;
+    background-color: $pri;
+    color: $lht;
     display: flex;
     div{
         padding: 1em;
@@ -167,11 +168,11 @@ body{
         font-weight: 400;
     }
     div span a{
-        color: $pri;
+        color: $lht;
     }
     div a{
         text-decoration: none;
-        color: $pri;
+        color: $lht;
     }
     &-bnr{
         font-size: 2em;
@@ -191,7 +192,7 @@ body{
     min-height: 100vh;
 }
 .sect{
-    background-color: $pri;
+    background-color: $lht;
     text-align: center;
     padding: 2em;
     display: grid;
@@ -202,7 +203,7 @@ body{
     font-weight: 400;
     margin: auto;
     padding: 16px;
-    color: $thr;
+    color: $pri;
 }
 .bttop{
     @extend .mnt;
@@ -211,8 +212,8 @@ body{
     bottom: 16px;
     background-color: #ffffff90;
     &:hover{
-        background-color: $thr;
-        color: $pri;
+        background-color: $pri;
+        color: $lht;
     }
 }
 .skal{
@@ -229,7 +230,7 @@ body{
     p{
         font-size: 20px;
         font-weight: 400;
-        color: $thr;
+        color: $pri;
     }
     @media(max-width: 500px){
         width: 100%;
@@ -240,12 +241,12 @@ body{
     width: 50px;
     height: 50px;
     margin: auto;
-    background-color: $thr;
+    background-color: $pri;
     border-radius: 50%;
     position: relative;
     i{
         @extend .csc;
-        color: $pri;
+        color: $lht;
         font-size: 20px;
     }
 }
