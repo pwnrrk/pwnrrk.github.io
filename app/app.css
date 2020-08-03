@@ -50,7 +50,7 @@ body {
 
 .brnd a {
   text-decoration: none;
-  color: #212121;
+  color: #16385f;
 }
 
 .nvm {
@@ -245,18 +245,19 @@ body {
   font-weight: 400;
   margin: auto;
   padding: 16px;
+  color: #16385f;
 }
 
 .bttop {
   position: fixed;
   right: 16px;
   bottom: 16px;
-  background-color: #00000030;
+  background-color: #ffffff90;
 }
 
 .bttop:hover {
-  background-color: #ffffff90;
-  color: #212121;
+  background-color: #16385f;
+  color: #ffffff;
 }
 
 .skal {
@@ -281,6 +282,7 @@ body {
 .sksb p {
   font-size: 20px;
   font-weight: 400;
+  color: #16385f;
 }
 
 @media (max-width: 500px) {

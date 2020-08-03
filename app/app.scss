@@ -44,7 +44,7 @@ body{
     font-weight: 400;
     a{
         text-decoration: none;
-        color: $sec;
+        color: $thr;
     }
 }
 .nvm{
@@ -202,16 +202,17 @@ body{
     font-weight: 400;
     margin: auto;
     padding: 16px;
+    color: $thr;
 }
 .bttop{
     @extend .mnt;
     position: fixed;
     right: 16px;
     bottom: 16px;
-    background-color: #00000030;
+    background-color: #ffffff90;
     &:hover{
-        background-color: #ffffff90;
-        color: $sec;
+        background-color: $thr;
+        color: $pri;
     }
 }
 .skal{
@@ -228,6 +229,7 @@ body{
     p{
         font-size: 20px;
         font-weight: 400;
+        color: $thr;
     }
     @media(max-width: 500px){
         width: 100%;
