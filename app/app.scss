@@ -43,6 +43,7 @@ body{
     width: fit-content;
     padding: 4px;
     font-weight: 400;
+    cursor: pointer;
     a{
         text-decoration: none;
         color: $pri;
@@ -60,13 +61,16 @@ body{
     margin: 1px;
     transition: background-color 250ms;
     border-radius: 5px;
+    cursor: pointer;
     &-active{
         background-color: $pri;
         color: $lht;
+        &:hover{
+            background-color: $pri !important;
+        }
     }
     &:hover{
-        background-color:$sec;
-        color: $lht;
+        background-color:#dddddd;
     }
 }
 .btn{
@@ -75,6 +79,7 @@ body{
     color: $lht;
     background-color: $sec;
     padding: 8px;
+    cursor: pointer;
     &:hover{
         background-color: $pri;
     }
@@ -150,6 +155,11 @@ body{
         transform: translate(0,-50%);
     }
 }
+.cv{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .ftr{
     width: 100%;
     background-color: $pri;
@@ -194,15 +204,13 @@ body{
 .sect{
     background-color: $lht;
     text-align: center;
-    padding: 2em;
-    display: grid;
+    height: 100%;
+    position: relative;
 }
 
 .stitl{
-    font-size: 2em;
     font-weight: 400;
     margin: auto;
-    padding: 16px;
     color: $pri;
 }
 .bttop{
@@ -218,6 +226,7 @@ body{
 }
 .skal{
     display: flex;
+    margin-top: 2em;
     @media(max-width:500px){
         display: list-item;
         list-style: none;

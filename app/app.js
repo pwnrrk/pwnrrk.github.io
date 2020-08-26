@@ -1,6 +1,6 @@
 function autoScroll(view) {
     var top = document.getElementById(view).offsetTop
-    window.scrollTo({ top: top - 40, behavior: 'smooth' })
+    window.scrollTo({ top: top, behavior: 'smooth' })
 }
 function backToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
