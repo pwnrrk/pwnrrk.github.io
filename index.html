@@ -5,29 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWT-DEV</title>
     <link rel="stylesheet" href="https://pwnrrk.github.io/minimalbootstrap/minBootstrap/css/minBootstrap.min.css">
+    <style>
+        .name:hover{
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body class="bg-light">
-    <nav class="navbar bg-light navbar-light shadow">
+    <nav class="navbar bg-white navbar-light shadow">
         <a href="/" class="navbar-brand text-primary">PWT-DEV</a>
         <button class="navbar-toggler" data-target="#navbar-col">&plus;</button>
         <div class="navbar-collapse" id="navbar-col">
             <ul>
                 <li><a href="#project" class="navbar-link active">My Project</a></li>
+                <li><a href="#contact" class="navbar-link active">Contact</a></li>
             </ul>
         </div>
     </nav>
     <div class="container mt-5">
-        <div class="rounded shadow p-3 text-dark">
+        <div class="rounded shadow bg-white p-3 text-dark">
             <h1>PWT-DEV Trainee Full Stack Developer</h1>
         </div>
         <div class="row mt-2 justify-content-center">
-            <div class="shadow rounded p-5 m-1" id="project" style="min-width: 320px;">
-                <h2 class="text-primary">My Recent Project</h2>
-                <a href="https://pwnrrk.github.io/minimalbootstrap"><img src="/mb-ico.png" alt="Minimal Bootstrap"
-                        style="width: 200px;"></a>
+            <div class="shadow bg-white rounded p-5 m-1" id="project" style="min-width: 320px;">
+                <div class="pb-2">
+                    <h2 class="text-primary">My Recent Project</h2>
+                    <a href="https://pwnrrk.github.io/minimalbootstrap"><img src="/mb-ico.png" alt="Minimal Bootstrap"
+                            style="width: 200px;"></a>
+                </div>
+                <div class="pb-2">
+                    <h2 class="text-primary">I've work for</h2>
+                    <a href="https://www.matchday.co.th" class="name" target="_blank">
+                        <div class="row align-items-center p-3">
+                            <img src="https://www.matchday.co.th/Pic/Matchday_Logo.png" alt="Matchday">
+                            <h2 class="text-red" style="font-weight: 600;">MATCHDAY</h2>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="shadow rounded p-5 m-1">
+            <div class="shadow rounded bg-white p-5 m-1">
                 <h2 class="text-primary">About Me</h2>
                 <p style="max-width: 500px;">
                     Hi! I'm Phuwanat Raroengklin. From Bangkok Thailand.
@@ -89,7 +106,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="shadow m-2 p-5 rounded" style="min-width: 320px;">
+            <div class="shadow m-2 p-5 bg-white rounded" id="contact" style="min-width: 320px;">
                 <h2 class="text-primary">Contact Me</h2>
                 <div>
                     Email: <a href="mailto:ggamegg170@gmail.com" class="text-dark">ggamegg170@gmail.com</a> |
