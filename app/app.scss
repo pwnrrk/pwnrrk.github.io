@@ -104,6 +104,9 @@ body{
     background-size: cover;
     position: relative;
     background-attachment: fixed;
+    @media (max-width:770px) {
+        background-attachment:scroll;
+    }
 }
 .bg1{
     width: 100%;
@@ -113,6 +116,9 @@ body{
     background-size: cover;
     position: relative;
     background-attachment: fixed;
+    @media (max-width:770px) {
+        background-attachment:scroll;
+    }
 }
 .bg2{
     width: 100%;
@@ -122,6 +128,9 @@ body{
     background-size: cover;
     position: relative;
     background-attachment: fixed;
+    @media (max-width:770px) {
+        background-attachment:scroll;
+    }
 }
 .bnrt{
     display: grid;
