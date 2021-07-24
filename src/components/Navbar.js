@@ -37,7 +37,7 @@ const NavbarMenuItem = styled.li`
 `;
 const NavbarLink = styled.a`
   text-decoration: none;
-  color: #666;
+  color: var(--body-color);
   font-weight: 500;
   transition: color 0.25s ease;
   &:hover {
