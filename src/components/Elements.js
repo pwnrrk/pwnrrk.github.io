@@ -22,15 +22,20 @@ const LinkButton = styled.a`
   text-decoration: none;
 `;
 
-const SectionTitle = styled.span`
+const SectionTitle = styled.div`
   font-size: 2rem;
   font-weight: 500;
+  text-align: ${props => props.align};
 `;
 
+const Link = styled.a`
+  color: #212121;
+`;
 const Elements = {
   StyledButton,
   LinkButton,
-  SectionTitle
+  SectionTitle,
+  Link
 };
 
 export default Elements;

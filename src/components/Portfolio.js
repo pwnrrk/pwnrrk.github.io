@@ -69,6 +69,15 @@ const Portfolio = () => (
           Simple text editor. Created for learning Javascript.
         </PortfolioItemContent>
       </PortfolioItem>
+      <PortfolioItem href="https://pwnrrk.github.io/ricky-wiki">
+        <PortfolioItemCoverWrapper>
+          <PortfolioItemCover src="/logo.png" />
+        </PortfolioItemCoverWrapper>
+        <PortfolioItemTitle>Ricky Wiki</PortfolioItemTitle>
+        <PortfolioItemContent>
+          Information website created for learning React.js
+        </PortfolioItemContent>
+      </PortfolioItem>
     </PortfolioContent>
     <Elements.SectionTitle>Experiences</Elements.SectionTitle>
     <PortfolioContent>

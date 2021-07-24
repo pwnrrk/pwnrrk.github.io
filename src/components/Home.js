@@ -42,6 +42,12 @@ const BannerTextHighlight = styled.span`
   font-weight: 500;
 `;
 
+const ImageCaption = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+`;
+
 const Link = styled.a`
   color: #212121;
 `;
@@ -49,8 +55,17 @@ const Link = styled.a`
 const Home = () => (
   <BannerWrapper id="home">
     <BannerBackgroundWrapper>
-      <BannerBackground src="https://images.unsplash.com/photo-1527443195645-1133f7f28990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80" />
-      Photo by <Link href="https://unsplash.com/@quaritsch?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Quaritsch Photography</Link> on <Link href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</Link>
+      <BannerBackground src="/bannerPencil.jpg" />
+      <ImageCaption>
+        Photo by{" "}
+        <Link href="https://unsplash.com/@joannakosinska?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+          Joanna Kosinska
+        </Link>{" "}
+        on{" "}
+        <Link href="https://unsplash.com/collections/3833048/office?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+          Unsplash
+        </Link>
+      </ImageCaption>
     </BannerBackgroundWrapper>
     <BannerTextWrapper>
       <BannerText>

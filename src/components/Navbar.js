@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 const { default: styled } = require("styled-components");
 
 const NavbarWrapper = styled.nav`
@@ -10,9 +10,12 @@ const NavbarWrapper = styled.nav`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #ffffff;
   z-index: 10;
   padding: 1rem;
+  transition: background 0.25s ease;
+  &.bg-active {
+    background-color: #ffffff;
+  }
   @media (min-width: 768px) {
     padding: 0 5rem;
     justify-content: space-between;
@@ -70,40 +73,65 @@ const NavbarMenuToggleIcon = styled.span`
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 100%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 `;
 
-const openSideNav = () => document.getElementById("SideNav").classList.add("active");
+const openSideNav = () =>
+  document.getElementById("SideNav").classList.add("active");
 
-const navLinkClick = (event) => {
+const navLinkClick = event => {
   event.preventDefault();
   let target = event.target.href;
   target = target.split("#");
   const id = target[target.length - 1];
   const targetSection = document.getElementById(id);
-  targetSection.scrollIntoView({behavior:"smooth"});
-}
+  targetSection.scrollIntoView({ behavior: "smooth" });
+};
+
+document.addEventListener("scroll", () => {
+  var navbar = document.getElementById("navbar");
+  var changePoint = document.getElementById("home").getBoundingClientRect().bottom;
+  if (window.scrollY > changePoint) {
+    navbar.classList.add("bg-active");
+  } else {
+    navbar.classList.remove("bg-active");
+  }
+});
 
 const Navbar = () => (
-  <NavbarWrapper>
+  <NavbarWrapper id="navbar">
     <NavbarMenuToggle onClick={openSideNav}>
       <NavbarMenuToggleIcon></NavbarMenuToggleIcon>
     </NavbarMenuToggle>
     <NavbarBrand href="/">R.Phuwanat</NavbarBrand>
     <NavbarMenu>
       <NavbarMenuItem>
-        <NavbarLink href="#home" onClick={navLinkClick}>Home</NavbarLink>
+        <NavbarLink href="#home" onClick={navLinkClick}>
+          Home
+        </NavbarLink>
       </NavbarMenuItem>
       <NavbarMenuItem>
-        <NavbarLink href="#about" onClick={navLinkClick}>About Me</NavbarLink>
+        <NavbarLink href="#about" onClick={navLinkClick}>
+          About Me
+        </NavbarLink>
       </NavbarMenuItem>
       <NavbarMenuItem>
-        <NavbarLink href="#projects" onClick={navLinkClick}>Projects</NavbarLink>
+        <NavbarLink href="#projects" onClick={navLinkClick}>
+          Projects
+        </NavbarLink>
       </NavbarMenuItem>
       <NavbarMenuItem>
-        <NavbarLink href="https://facebook.com/pwnrrk" target="_blank" rel="noopener noreferrer">
+        <NavbarLink
+          href="https://facebook.com/pwnrrk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faFacebook} />
         </NavbarLink>
       </NavbarMenuItem>
       <NavbarMenuItem>
-        <NavbarLink href="https://instagram.com/r.phuwanat" target="_blank" rel="noopener noreferrer">
+        <NavbarLink
+          href="https://instagram.com/r.phuwanat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faInstagram} />
         </NavbarLink>
       </NavbarMenuItem>
