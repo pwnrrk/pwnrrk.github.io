@@ -156,9 +156,9 @@ const About = () => (
       <AboutMeArea>
         <Elements.SectionTitle align="center">About Me</Elements.SectionTitle>
         <AboutContentParagraph>
-          I'm Full-Stack(Front-End heavy) Website Developer from Bangkok
+          I'm Front-End Website Developer from Bangkok
           Thailand. Self learner in developing website. I also have good
-          responsive and user experience knowledge. 1 year experienced of many
+          responsive and user experience knowledge. Plus basic about Back-End, Data-Structure and Database. 1 year experienced of many
           part-time remote work.
         </AboutContentParagraph>
       </AboutMeArea>
@@ -175,7 +175,7 @@ const About = () => (
           </PerformanceItem>
           <PerformanceItem>
             <PerformanceItemContent>
-              <PerformanceNumber>2</PerformanceNumber> Experienced with Java,
+              <PerformanceNumber>2</PerformanceNumber> Basic knowledge about Java,
               Python, Node.js
             </PerformanceItemContent>
           </PerformanceItem>

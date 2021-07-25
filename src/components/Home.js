@@ -69,7 +69,7 @@ const Home = () => (
     </BannerBackgroundWrapper>
     <BannerTextWrapper>
       <BannerText>
-        Full-Stack <BannerTextHighlight>Website Developer</BannerTextHighlight>
+        Front-End <BannerTextHighlight>Website Developer</BannerTextHighlight>
       </BannerText>
     </BannerTextWrapper>
   </BannerWrapper>
