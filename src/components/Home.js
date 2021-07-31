@@ -39,7 +39,7 @@ const BannerText = styled.div`
 `;
 const BannerTextHighlight = styled.span`
   font-size: 4.5rem;
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const ImageCaption = styled.div`
