@@ -64,16 +64,16 @@ const PerformanceNumber = styled.div`
   background-color: #212121;
   /* background-color: var(--primary); */
 `;
-const AvatarWrapper = styled.div`
+/*const AvatarWrapper = styled.div`
   flex: none !important;
   padding: 0 !important;
-`;
-const Avatar = styled.img`
+`;*/
+/*const Avatar = styled.img`
   width: 180px;
   height: 100%;
   object-fit: cover;
-`;
-const CardExample = styled.div`
+`;*/
+/*const CardExample = styled.div`
   max-width: 500px;
   margin: auto;
   padding: 0;
@@ -122,7 +122,7 @@ const CardExample = styled.div`
       background-color: rgba(255, 255, 255, 0.7);
     }
   }
-`;
+`;*/
 const ExampleWrapper = styled.div`
   background-image: url("/about.jpg");
   height: 100vh;
@@ -138,7 +138,7 @@ const ExampleWrapper = styled.div`
     }
   }
 `;
-setInterval(() => {
+/*setInterval(() => {
   var ex = document.getElementById("ex-card");
   if (ex.classList.contains("md")) {
     ex.classList.remove("md");
@@ -149,7 +149,7 @@ setInterval(() => {
     return;
   }
   ex.classList.add("md");
-}, 3000);
+}, 3000);*/
 const About = () => (
   <AboutWrapper id="about">
     <AboutContent>
@@ -157,9 +157,7 @@ const About = () => (
         <Elements.SectionTitle align="center">About Me</Elements.SectionTitle>
         <AboutContentParagraph>
           I'm Front-End Website Developer from Bangkok
-          Thailand. Self learner in developing website. I also have good
-          responsive and user experience knowledge. Plus basic about Back-End, Data-Structure and Database. 1 year experienced of many
-          part-time remote work.
+          Thailand. Bachelor in Computer Science and self learner in developing website. I also have responsive and user experience knowledge. Back-End, Data-Structure and Database. 1 year experienced as a freelance in Front-End Developer role. And I always open mind to learning.
         </AboutContentParagraph>
       </AboutMeArea>
     </AboutContent>
@@ -191,29 +189,6 @@ const About = () => (
             </PerformanceItemContent>
           </PerformanceItem>
         </PerformanceWrapper>
-      </div>
-      <div>
-        <CardExample id="ex-card" className="full">
-          <AvatarWrapper>
-            <Avatar src="https://images.unsplash.com/photo-1605406575497-015ab0d21b9b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODZ8fHdvbWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" />
-          </AvatarWrapper>
-          <div className="describe">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <div>
-              Photo by{" "}
-              <Elements.Link href="https://unsplash.com/@mathildelangevin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Mathilde Langevin
-              </Elements.Link>{" "}
-              on{" "}
-              <Elements.Link href="https://unsplash.com/s/photos/woman?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                Unsplash
-              </Elements.Link>
-            </div>
-          </div>
-        </CardExample>
       </div>
     </ExampleWrapper>
   </AboutWrapper>
