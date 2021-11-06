@@ -12,9 +12,11 @@ const NavbarWrapper = styled.nav`
   align-items: center;
   z-index: 10;
   padding: 1rem;
+  color: #fff;
   transition: background 0.25s ease;
   &.bg-active {
     background-color: #ffffff;
+    color: inherit;
   }
   @media (min-width: 768px) {
     padding: 0 5rem;
@@ -37,7 +39,7 @@ const NavbarMenuItem = styled.li`
 `;
 const NavbarLink = styled.a`
   text-decoration: none;
-  color: var(--body-color);
+  color: inherit;
   font-weight: 500;
   transition: color 0.25s ease;
   &:hover {
@@ -48,7 +50,7 @@ const NavbarBrand = styled.a`
   font-size: 1.5rem;
   font-weight: 500;
   text-decoration: none;
-  color: var(--body-color);
+  color: inherit;
 `;
 
 const NavbarMenuToggle = styled.button`

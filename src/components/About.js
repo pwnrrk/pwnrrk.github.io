@@ -124,13 +124,15 @@ const PerformanceNumber = styled.div`
   }
 `;*/
 const ExampleWrapper = styled.div`
-  background-image: url("/about.jpg");
   height: 100vh;
   display: flex;
   align-items: center;
   padding: 0 1rem;
   flex-direction: column;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c98 C 57.6%2c126 172.8%2c248.8 288%2c238 C 403.2%2c227.2 460.8%2c44.6 576%2c44 C 691.2%2c43.4 748.8%2c243.2 864%2c235 C 979.2%2c226.8 1036.8%2c6.2 1152%2c3 C 1267.2%2c-0.2 1382.4%2c175.8 1440%2c219L1440 560L0 560z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c391 C 96%2c400.4 288%2c438.8 480%2c438 C 672%2c437.2 768%2c366.2 960%2c387 C 1152%2c407.8 1344%2c511 1440%2c542L1440 560L0 560z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
   @media (min-width: 998px) {
     flex-direction: row;
     & > div {
@@ -163,7 +165,7 @@ const About = () => (
     </AboutContent>
     <ExampleWrapper>
       <div>
-        <Elements.SectionTitle>What I can do</Elements.SectionTitle>
+        <Elements.SectionTitle style={{color: "#fff"}}>What I can do</Elements.SectionTitle>
         <PerformanceWrapper>
           <PerformanceItem>
             <PerformanceItemContent>
