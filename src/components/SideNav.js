@@ -54,9 +54,9 @@ const SideNav = () => (
       <SideNavMenuItem>
         <SideNavLink onClick={close} href="#about">About Me</SideNavLink>
       </SideNavMenuItem>
-      <SideNavMenuItem>
+      {/*<SideNavMenuItem>
         <SideNavLink onClick={close} href="#projects">Projects</SideNavLink>
-      </SideNavMenuItem>
+      </SideNavMenuItem>*/}
       <SideNavMenuItem>
         <SideNavLink onClick={close} href="https://facebook.com/pwnrrk" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faFacebook} />
