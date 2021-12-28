@@ -78,7 +78,7 @@ const NavbarMenuToggleIcon = styled.span`
 const openSideNav = () =>
   document.getElementById("SideNav").classList.add("active");
 
-const navLinkClick = event => {
+const navLinkClick = (event) => {
   event.preventDefault();
   let target = event.target.href;
   target = target.split("#");
@@ -89,7 +89,9 @@ const navLinkClick = event => {
 
 document.addEventListener("scroll", () => {
   var navbar = document.getElementById("navbar");
-  var changePoint = document.getElementById("home").getBoundingClientRect().bottom;
+  var changePoint = document
+    .getElementById("home")
+    .getBoundingClientRect().bottom;
   if (window.scrollY > changePoint) {
     navbar.classList.add("bg-active");
   } else {
@@ -116,7 +118,7 @@ const Navbar = () => (
       </NavbarMenuItem>
       <NavbarMenuItem>
         <NavbarLink href="#projects" onClick={navLinkClick}>
-          Projects
+          Experiences
         </NavbarLink>
       </NavbarMenuItem>
       <NavbarMenuItem>

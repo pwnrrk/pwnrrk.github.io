@@ -49,7 +49,7 @@ const PortfolioItemContent = styled.p`
 
 const Portfolio = () => (
   <PortfolioWrapper id="projects">
-    <Elements.SectionTitle>Projects</Elements.SectionTitle>
+    {/*<Elements.SectionTitle>Projects</Elements.SectionTitle>
     <PortfolioContent>
       <PortfolioItem href="https://pwnrrk.github.io/minimalbootstrap">
         <PortfolioItemCoverWrapper>
@@ -78,7 +78,7 @@ const Portfolio = () => (
           Information website created for learning React.js
         </PortfolioItemContent>
       </PortfolioItem>
-    </PortfolioContent>
+    </PortfolioContent>*/}
     <Elements.SectionTitle>Experiences</Elements.SectionTitle>
     <PortfolioContent>
       <PortfolioItem href="https://matchday.co.th">
