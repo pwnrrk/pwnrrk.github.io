@@ -158,14 +158,19 @@ const About = () => (
       <AboutMeArea>
         <Elements.SectionTitle align="center">About Me</Elements.SectionTitle>
         <AboutContentParagraph>
-          I'm Front-End Website Developer from Bangkok
-          Thailand. Bachelor in Computer Science and self learner in developing website. I also have responsive and user experience knowledge. Back-End, Data-Structure and Database. 1 year experienced as a freelance in Front-End Developer role. And I always open mind to learning.
+          I'm Front-End Website Developer from Bangkok Thailand. Bachelor in
+          Computer Science and self learner in developing website. I also have
+          responsive and user experience knowledge. Back-End, Data-Structure and
+          Database. 1 year experienced as a freelance in Front-End Developer
+          role. And I always open mind to learning.
         </AboutContentParagraph>
       </AboutMeArea>
     </AboutContent>
     <ExampleWrapper>
       <div>
-        <Elements.SectionTitle style={{color: "#fff"}}>What I can do</Elements.SectionTitle>
+        <Elements.SectionTitle style={{ color: "#fff" }}>
+          What I can do
+        </Elements.SectionTitle>
         <PerformanceWrapper>
           <PerformanceItem>
             <PerformanceItemContent>
@@ -175,19 +180,20 @@ const About = () => (
           </PerformanceItem>
           <PerformanceItem>
             <PerformanceItemContent>
-              <PerformanceNumber>2</PerformanceNumber> Basic knowledge about Java,
-              Python, Node.js
+              <PerformanceNumber>2</PerformanceNumber> Experienced with
+              Javascripts, CSS, Node.js, Java and C#
             </PerformanceItemContent>
           </PerformanceItem>
           <PerformanceItem>
             <PerformanceItemContent>
-              <PerformanceNumber>3</PerformanceNumber> Can make responsive
-              website
+              <PerformanceNumber>3</PerformanceNumber> Responsive website
+              development
             </PerformanceItemContent>
           </PerformanceItem>
           <PerformanceItem>
             <PerformanceItemContent>
-              <PerformanceNumber>4</PerformanceNumber> Easy going with teams
+              <PerformanceNumber>4</PerformanceNumber> Open mind to learn new
+              things
             </PerformanceItemContent>
           </PerformanceItem>
         </PerformanceWrapper>

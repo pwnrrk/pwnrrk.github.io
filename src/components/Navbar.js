@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const { default: styled } = require("styled-components");
 
 const NavbarWrapper = styled.nav`
@@ -123,20 +123,11 @@ const Navbar = () => (
       </NavbarMenuItem>
       <NavbarMenuItem>
         <NavbarLink
-          href="https://facebook.com/pwnrrk"
+          href="https://github.com/pwnrrk"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faFacebook} />
-        </NavbarLink>
-      </NavbarMenuItem>
-      <NavbarMenuItem>
-        <NavbarLink
-          href="https://instagram.com/r.phuwanat"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon icon={faGithub} />
         </NavbarLink>
       </NavbarMenuItem>
     </NavbarMenu>
