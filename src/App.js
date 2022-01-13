@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Portfolio from "./components/Portfolio";
 import SideNav from "./components/SideNav";
-
+import React from "react";
 function App() {
   return (
     <div>

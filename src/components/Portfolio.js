@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Elements from "./Elements";
+import React from "react";
 
 const PortfolioWrapper = styled.div`
   display: flex;

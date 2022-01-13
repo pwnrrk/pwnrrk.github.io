@@ -1,4 +1,5 @@
-const { default: styled } = require("styled-components");
+import styled from "styled-components";
+import React from "react";
 
 const BannerWrapper = styled.div`
   position: relative;
@@ -25,7 +26,7 @@ const BannerBackground = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
- `;
+`;
 
 const BannerTextWrapper = styled.div`
   position: relative;

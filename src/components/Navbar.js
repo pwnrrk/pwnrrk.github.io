@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-const { default: styled } = require("styled-components");
-
+import styled from "styled-components";
+import React from "react";
 const NavbarWrapper = styled.nav`
   position: fixed;
   top: 0;

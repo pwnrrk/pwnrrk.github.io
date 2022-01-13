@@ -25,7 +25,7 @@ const LinkButton = styled.a`
 const SectionTitle = styled.div`
   font-size: 2rem;
   font-weight: 500;
-  text-align: ${props => props.align};
+  text-align: ${(props) => props.align};
 `;
 
 const Link = styled.a`
@@ -35,7 +35,7 @@ const Elements = {
   StyledButton,
   LinkButton,
   SectionTitle,
-  Link
+  Link,
 };
 
 export default Elements;

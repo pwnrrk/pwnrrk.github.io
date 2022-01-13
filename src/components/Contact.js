@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Elements from "./Elements";
+import React from "react";
 
 const ContactWrapper = styled.footer`
   padding: 1rem 1rem;
@@ -22,7 +23,11 @@ const ContactLink = styled.a`
 const Contact = () => (
   <ContactWrapper>
     <Elements.SectionTitle>Contact Me</Elements.SectionTitle>
-    <div><ContactLink href="mailto:r.phuwanat.dev@gmail.com">Email: r.phuwanat.dev@gmail.com</ContactLink></div>
+    <div>
+      <ContactLink href="mailto:r.phuwanat.dev@gmail.com">
+        Email: r.phuwanat.dev@gmail.com
+      </ContactLink>
+    </div>
     <div>© 2020 R.Phuwanat Thailand | All rights reserved</div>
   </ContactWrapper>
 );

@@ -1,6 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, } from '@fortawesome/free-brands-svg-icons';
-const { default: styled } = require("styled-components");
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import styled from "styled-components";
+import React from "react";
 
 const SideNavWrapper = styled.div`
   position: fixed;
@@ -43,28 +44,43 @@ const SideNavLink = styled.a`
   color: var(--body-color);
 `;
 
-const close = () => document.getElementById("SideNav").classList.remove("active");
+const close = () =>
+  document.getElementById("SideNav").classList.remove("active");
 
 const SideNav = () => (
   <SideNavWrapper id="SideNav">
     <SideNavMenu>
       <SideNavMenuItem>
-        <SideNavLink onClick={close} href="#home">Home</SideNavLink>
+        <SideNavLink onClick={close} href="#home">
+          Home
+        </SideNavLink>
       </SideNavMenuItem>
       <SideNavMenuItem>
-        <SideNavLink onClick={close} href="#about">About Me</SideNavLink>
+        <SideNavLink onClick={close} href="#about">
+          About Me
+        </SideNavLink>
       </SideNavMenuItem>
       {/*<SideNavMenuItem>
         <SideNavLink onClick={close} href="#projects">Projects</SideNavLink>
       </SideNavMenuItem>*/}
       <SideNavMenuItem>
-        <SideNavLink onClick={close} href="https://facebook.com/pwnrrk" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faFacebook} />
+        <SideNavLink
+          onClick={close}
+          href="https://facebook.com/pwnrrk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faFacebook} />
         </SideNavLink>
       </SideNavMenuItem>
       <SideNavMenuItem>
-        <SideNavLink onClick={close} href="https://instagram.com/r.phuwanat" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faInstagram} />
+        <SideNavLink
+          onClick={close}
+          href="https://instagram.com/r.phuwanat"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faInstagram} />
         </SideNavLink>
       </SideNavMenuItem>
       <SideNavMenuItem>

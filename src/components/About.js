@@ -1,6 +1,6 @@
 import Elements from "./Elements";
-
-const { default: styled } = require("styled-components");
+import styled from "styled-components";
+import React from "react";
 
 const AboutWrapper = styled.div`
   background-color: #fff;
