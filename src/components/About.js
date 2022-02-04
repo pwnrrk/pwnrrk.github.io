@@ -140,18 +140,16 @@ const ExampleWrapper = styled.div`
     }
   }
 `;
-/*setInterval(() => {
-  var ex = document.getElementById("ex-card");
-  if (ex.classList.contains("md")) {
-    ex.classList.remove("md");
-    ex.classList.add("full");
-    return;
-  } else if (ex.classList.contains("full")) {
-    ex.classList.remove("full");
-    return;
+
+const StatsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  img {
+    padding: 1rem;
   }
-  ex.classList.add("md");
-}, 3000);*/
+`;
+
 const About = () => (
   <AboutWrapper id="about">
     <AboutContent>
@@ -165,6 +163,16 @@ const About = () => (
           role. And I always open mind to learning.
         </AboutContentParagraph>
       </AboutMeArea>
+      <StatsWrapper>
+        <img
+          src="https://github-readme-stats.vercel.app/api?username=pwnrrk"
+          alt="git-stat"
+        />
+        <img
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=pwnrrk&langs_count=8"
+          alt="lang-stat"
+        />
+      </StatsWrapper>
     </AboutContent>
     <ExampleWrapper>
       <div>

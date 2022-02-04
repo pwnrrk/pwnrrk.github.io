@@ -94,6 +94,18 @@ const Portfolio = () => (
           <div>November 2020 - March 2021</div>
         </PortfolioItemContent>
       </PortfolioItem>
+      <PortfolioItem href="https://www.ttcl.com">
+        <PortfolioItemCoverWrapper>
+          <PortfolioItemCover src="https://www.ttcl.com/images/logo.png" />
+        </PortfolioItemCoverWrapper>
+        <PortfolioItemTitle>
+          IT Engineer at TTCL Public Company Limited
+        </PortfolioItemTitle>
+        <PortfolioItemContent>
+          <div>Full-Stack Developer</div>
+          <div>February 2022 - Now</div>
+        </PortfolioItemContent>
+      </PortfolioItem>
     </PortfolioContent>
   </PortfolioWrapper>
 );
