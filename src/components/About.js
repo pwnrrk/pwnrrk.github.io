@@ -145,6 +145,7 @@ const StatsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
   img {
     padding: 1rem;
   }
@@ -156,21 +157,19 @@ const About = () => (
       <AboutMeArea>
         <Elements.SectionTitle align="center">About Me</Elements.SectionTitle>
         <AboutContentParagraph>
-          I'm Front-End Website Developer from Bangkok Thailand. Bachelor in
-          Computer Science and self learner in developing website. I also have
-          responsive and user experience knowledge. Back-End, Data-Structure and
-          Database. 1 year experienced as a freelance in Front-End Developer
-          role. And I always open mind to learning.
+          Hi, I am Full-Stack Developer from Bangkok Thailand. Mastered with Web
+          Sites and Web Applications development. Simplify difficult tasks and
+          team plays. Always ready to learn and grows.
         </AboutContentParagraph>
       </AboutMeArea>
       <StatsWrapper>
         <img
-          src="https://github-readme-stats.vercel.app/api?username=pwnrrk"
-          alt="git-stat"
-        />
-        <img
           src="https://github-readme-stats.vercel.app/api/top-langs/?username=pwnrrk&langs_count=8"
           alt="lang-stat"
+        />
+        <img
+          src="https://github-readme-stats.vercel.app/api?username=pwnrrk"
+          alt="git-stat"
         />
       </StatsWrapper>
     </AboutContent>

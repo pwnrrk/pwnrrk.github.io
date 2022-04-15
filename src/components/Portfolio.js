@@ -90,7 +90,7 @@ const Portfolio = () => (
           Internship at MATCHDAY HUB Co.,Ltd.
         </PortfolioItemTitle>
         <PortfolioItemContent>
-          <div>Front-End Developer with Vue.js</div>
+          <div>Front-End Developer</div>
           <div>November 2020 - March 2021</div>
         </PortfolioItemContent>
       </PortfolioItem>
