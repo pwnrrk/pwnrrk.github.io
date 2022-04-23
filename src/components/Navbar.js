@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import React from "react";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 const NavbarWrapper = styled.nav`
   position: fixed;
   top: 0;
@@ -12,12 +13,8 @@ const NavbarWrapper = styled.nav`
   align-items: center;
   z-index: 10;
   padding: 1rem;
-  color: #fff;
+  background-color: var(--bg-color);
   transition: background 0.25s ease;
-  &.bg-active {
-    background-color: #ffffff;
-    color: inherit;
-  }
   @media (min-width: 768px) {
     padding: 0 5rem;
     justify-content: space-between;
@@ -41,9 +38,12 @@ const NavbarLink = styled.a`
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  transition: color 0.25s ease;
+  transition: background 0.25s ease;
+  display: block;
+  padding: 1rem;
+  border-radius: 1rem;
   &:hover {
-    color: #222;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 `;
 const NavbarBrand = styled.a`
@@ -55,24 +55,13 @@ const NavbarBrand = styled.a`
 
 const NavbarMenuToggle = styled.button`
   display: inline-block;
-  background: none;
   border: none;
-  color: var(--body-color);
   cursor: pointer;
+  color: var(--fg-color);
+  background: none;
   @media (min-width: 768px) {
     display: none;
   }
-`;
-
-const NavbarMenuToggleIcon = styled.span`
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 100%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 `;
 
 const openSideNav = () =>
@@ -87,22 +76,10 @@ const navLinkClick = (event) => {
   targetSection.scrollIntoView({ behavior: "smooth" });
 };
 
-document.addEventListener("scroll", () => {
-  var navbar = document.getElementById("navbar");
-  var changePoint = document
-    .getElementById("home")
-    .getBoundingClientRect().bottom;
-  if (window.scrollY > changePoint) {
-    navbar.classList.add("bg-active");
-  } else {
-    navbar.classList.remove("bg-active");
-  }
-});
-
 const Navbar = () => (
   <NavbarWrapper id="navbar">
     <NavbarMenuToggle onClick={openSideNav}>
-      <NavbarMenuToggleIcon></NavbarMenuToggleIcon>
+      <FontAwesomeIcon icon={faBars} />
     </NavbarMenuToggle>
     <NavbarBrand href="/">R.Phuwanat</NavbarBrand>
     <NavbarMenu>

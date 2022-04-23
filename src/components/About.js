@@ -3,7 +3,6 @@ import styled from "styled-components";
 import React from "react";
 
 const AboutWrapper = styled.div`
-  background-color: #fff;
   padding: 3rem 0;
 `;
 
@@ -36,13 +35,12 @@ const PerformanceItem = styled.div`
 const PerformanceItemContent = styled.div`
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
   height: 100%;
 `;
 const AboutMeArea = styled.div`
   max-width: 500px;
-  min-height: 500px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -64,65 +62,23 @@ const PerformanceNumber = styled.div`
   background-color: #212121;
   /* background-color: var(--primary); */
 `;
-/*const AvatarWrapper = styled.div`
-  flex: none !important;
-  padding: 0 !important;
-`;*/
-/*const Avatar = styled.img`
+const Avatar = styled.img`
   width: 180px;
-  height: 100%;
+  height: 180px;
+  border-radius: 50%;
   object-fit: cover;
-`;*/
-/*const CardExample = styled.div`
+`;
+const CardExample = styled.div`
   max-width: 500px;
   margin: auto;
-  padding: 0;
+  padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0 5px 7px 4px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  & > div {
-    padding: 0 1rem;
-    flex: 1 0 50%;
-  }
-  &.md {
-    max-width: 300px;
-    padding: 1rem;
-    ${AvatarWrapper} {
-      flex: 1 0 100% !important;
-      text-align: center;
-    }
-    ${Avatar} {
-      border-radius: 50%;
-      height: 180px;
-    }
-  }
-  &.full {
-    width: 350px;
-    height: 350px;
-    position: relative;
-    ${AvatarWrapper} {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-    ${Avatar} {
-      width: 100%;
-      height: 100%;
-    }
-    .describe {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: rgba(255, 255, 255, 0.7);
-    }
-  }
-`;*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 const ExampleWrapper = styled.div`
   height: 100vh;
   display: flex;
@@ -131,8 +87,6 @@ const ExampleWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c98 C 57.6%2c126 172.8%2c248.8 288%2c238 C 403.2%2c227.2 460.8%2c44.6 576%2c44 C 691.2%2c43.4 748.8%2c243.2 864%2c235 C 979.2%2c226.8 1036.8%2c6.2 1152%2c3 C 1267.2%2c-0.2 1382.4%2c175.8 1440%2c219L1440 560L0 560z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c391 C 96%2c400.4 288%2c438.8 480%2c438 C 672%2c437.2 768%2c366.2 960%2c387 C 1152%2c407.8 1344%2c511 1440%2c542L1440 560L0 560z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
   @media (min-width: 998px) {
     flex-direction: row;
     & > div {
@@ -154,30 +108,21 @@ const StatsWrapper = styled.div`
 const About = () => (
   <AboutWrapper id="about">
     <AboutContent>
-      <AboutMeArea>
-        <Elements.SectionTitle align="center">About Me</Elements.SectionTitle>
-        <AboutContentParagraph>
-          Hi, I am Full-Stack Developer from Bangkok Thailand. Mastered with Web
-          Sites and Web Applications development. Simplify difficult tasks and
-          team plays. Always ready to learn and grows.
-        </AboutContentParagraph>
-      </AboutMeArea>
-      <StatsWrapper>
-        <img
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=pwnrrk&langs_count=8"
-          alt="lang-stat"
-        />
-        <img
-          src="https://github-readme-stats.vercel.app/api?username=pwnrrk"
-          alt="git-stat"
-        />
-      </StatsWrapper>
+      <CardExample>
+        <Avatar src="/avatar.jpg" />
+        <AboutMeArea>
+          <h3>About Me</h3>
+          <AboutContentParagraph>
+            Hi, I am Full-Stack Developer from Bangkok Thailand. Mastered with
+            Web Sites and Web Applications development. Simplify difficult tasks
+            and team plays. Always ready to learn and grows.
+          </AboutContentParagraph>
+        </AboutMeArea>
+      </CardExample>
     </AboutContent>
     <ExampleWrapper>
       <div>
-        <Elements.SectionTitle style={{ color: "#fff" }}>
-          What I can do
-        </Elements.SectionTitle>
+        <Elements.SectionTitle>What I can do</Elements.SectionTitle>
         <PerformanceWrapper>
           <PerformanceItem>
             <PerformanceItemContent>

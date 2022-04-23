@@ -15,7 +15,8 @@ const SideNavWrapper = styled.div`
   bottom: 0;
   width: auto;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
   z-index: 15;
   transform: translateX(-100%);
   transition: transform 0.25s ease;

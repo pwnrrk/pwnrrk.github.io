@@ -4,17 +4,15 @@ import React from "react";
 
 const ContactWrapper = styled.footer`
   padding: 1rem 1rem;
-  /* background-color: #e9effd; */
   background-color: #212121;
   text-align: center;
   margin: auto;
   line-height: 2;
-  color: #fff;
 `;
 
 const ContactLink = styled.a`
-  color: #fff;
   text-decoration: none;
+  color: inherit;
   &:hover {
     text-decoration: underline;
   }
