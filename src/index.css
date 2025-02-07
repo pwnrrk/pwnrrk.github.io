@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  body {
+    @apply dark:bg-black dark:text-white;
+  }
+}
+
+html {
+  font-family: "Geist", serif;
+  font-optical-sizing: auto;
+}
+
+code,
+.font-mono {
+  font-family: "Geist Mono", serif;
+  font-optical-sizing: auto;
+}
