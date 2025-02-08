@@ -1,10 +1,22 @@
 import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faChevronDown, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  Tab,
+  TabGroup,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Transition,
+} from "@headlessui/react";
 import React from "react";
+import { InstagramEmbed } from "react-social-media-embed";
 
 const experiences = [
-  <a href="http://react.dev" className="flex gap-2 items-center">
+  <a
+    href="http://react.dev"
+    className="flex gap-2 items-center dark:text-white"
+  >
     <svg
       viewBox="-10.5 -9.45 21 18.9"
       fill="none"
@@ -19,7 +31,7 @@ const experiences = [
       </g>
     </svg>
   </a>,
-  <a href="https://nextjs.org/">
+  <a href="https://nextjs.org/" className="dark:text-white">
     <svg
       aria-label="Next.js logotype"
       role="img"
@@ -62,7 +74,7 @@ const experiences = [
       ></path>
     </svg>
   </a>,
-  <a href="https://nodejs.org/en">
+  <a href="https://nodejs.org/en" className="dark:text-white">
     <svg
       viewBox="0 0 267 80"
       fill="none"
@@ -172,20 +184,26 @@ const experiences = [
       </defs>
     </svg>
   </a>,
-  <a href="https://expressjs.com/" className="font-medium text-2xl">
+  <a
+    href="https://expressjs.com/"
+    className="font-medium text-2xl dark:text-white"
+  >
     Express.js
   </a>,
-  <a href="https://typeorm.io/">
+  <a href="https://typeorm.io/" className="dark:text-white">
     <img
       src="https://github.com/typeorm/typeorm/raw/master/resources/typeorm-logo-colored-dark.png"
       alt=""
       className="h-7"
     />
   </a>,
-  <a href="https://sequelize.org/" className="flex items-center gap-2">
+  <a
+    href="https://sequelize.org/"
+    className="flex items-center gap-2 dark:text-white"
+  >
     <img src="https://sequelize.org/img/logo.svg" className="h-7" alt="" />
   </a>,
-  <a href="https://tailwindcss.com/">
+  <a href="https://tailwindcss.com/" className="dark:text-white">
     <svg viewBox="0 0 162 24" fill="none" className="h-7">
       <path
         fill-rule="evenodd"
@@ -201,7 +219,7 @@ const experiences = [
       ></path>
     </svg>
   </a>,
-  <a href="https://mui.com/">
+  <a href="https://mui.com/" className="dark:text-white">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 117 36"
@@ -222,7 +240,7 @@ const experiences = [
       ></path>
     </svg>
   </a>,
-  <a href="https://headlessui.com/">
+  <a href="https://headlessui.com/" className="dark:text-white">
     <svg
       className="hidden sm:inline h-7"
       viewBox="0 0 174 32"
@@ -246,18 +264,24 @@ const experiences = [
       ></path>
     </svg>
   </a>,
-  <a href="https://www.microsoft.com/en-us/sql-server">
+  <a
+    href="https://www.microsoft.com/en-us/sql-server"
+    className="dark:text-white"
+  >
     <img src="/sql-server.png" className="h-7" alt="" />
   </a>,
-  <a href="https://www.postman.com/" className="flex items-center gap-2">
+  <a
+    href="https://www.postman.com/"
+    className="flex items-center gap-2 dark:text-white"
+  >
     <img
       src="https://voyager.postman.com/logo/postman-logo-icon-orange.svg"
       className="h-7"
       alt=""
     />
-    <span className="font-medium text-2xl">Postman</span>
+    <span className="font-medium text-2xl dark:text-white">Postman</span>
   </a>,
-  <a href="https://www.figma.com">
+  <a href="https://www.figma.com" className="dark:text-white">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -289,11 +313,118 @@ const experiences = [
   </a>,
 ];
 
+const sections = [
+  <section id="work-experience">
+    <h2 className="font-medium text-3xl mb-4">Development Experience</h2>
+    <div>
+      <b>Full-Stack Developer</b>
+    </div>
+    <div className="italic">TTCL Public Company Limited – [2022 - Present]</div>
+    <ul className="list-disc list-inside my-2 text-sm/6 xl:text-base/10">
+      <li>
+        Developed and maintained web applications using{" "}
+        <b>React, TypeScript, and Node.js.</b>
+      </li>
+      <li>
+        Designed and managed relational databases with <b>SQL Server.</b>
+      </li>
+      <li>
+        Built and integrated <b>REST APIs</b> and <b>GraphQL</b> for efficient
+        data handling.
+      </li>
+      <li>
+        Worked on various <b>data management web applications</b>, ensuring
+        scalability and performance.
+      </li>
+      <li>
+        Collaborated with teams to <b>simplify complex tasks</b> and improve
+        development workflows.
+      </li>
+      <li>Strong problem-solving and debugging skills.</li>
+    </ul>
+  </section>,
+  <section id="tools">
+    <h2 className="font-medium text-3xl mb-4">Technologies I Use</h2>
+    <p className="text-lg/6 pb-6">
+      These are the tools and frameworks I currently use to deliver high-quality
+      work.
+    </p>
+    <div className="py-4 flex gap-12 items-center flex-wrap">
+      {experiences.map((item, index) => (
+        <span key={index}>{item}</span>
+      ))}
+    </div>
+  </section>,
+  <section id="about-me">
+    <h2 className="font-medium text-3xl mb-4">About Me</h2>
+    <p className="text-lg/6 pb-6 max-w-screen-md">
+      A programmer and traveler with a passion for development, problem-solving,
+      and discovering new things. As a full-stack developer, I understand
+      business logic and implement solutions efficiently, ensuring fast delivery
+      and stability.
+    </p>
+    <div>
+      <InstagramEmbed url="https://www.instagram.com/r.phuwanat/" />
+    </div>
+  </section>,
+  <section id="contact">
+    <h2 className="font-medium text-3xl mb-4">Contact</h2>
+    <div className="mt-6 border-t border-gray-100 dark:border-gray-700">
+      <dl className="divide-y divide-gray-100 dark:divide-gray-700">
+        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt className="text-sm/6 font-medium text-gray-900 dark:text-gray-100">
+            Email
+          </dt>
+          <dd className="mt-1 text-sm/6 text-gray-700 dark:text-gray-300 sm:col-span-2 sm:mt-0">
+            <a href="mailto:r.phuwanat.dev@gmail.com">
+              r.phuwanat.dev@gmail.com
+            </a>
+          </dd>
+        </div>
+        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt className="text-sm/6 font-medium text-gray-900 dark:text-gray-100">
+            Phone
+          </dt>
+          <dd className="mt-1 text-sm/6 text-gray-700 dark:text-gray-300 sm:col-span-2 sm:mt-0">
+            <a href="tel:+66994936528">+66 99 493 6528</a>
+          </dd>
+        </div>
+        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt className="text-sm/6 font-medium text-gray-900 dark:text-gray-100">
+            Line ID
+          </dt>
+          <dd className="mt-1 text-sm/6 text-gray-700 dark:text-gray-300 sm:col-span-2 sm:mt-0">
+            <a href="https://line.me/ti/p/~yern2026">yern2016</a>
+          </dd>
+        </div>
+        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt className="text-sm/6 font-medium text-gray-900 dark:text-gray-100">
+            Available Hour
+          </dt>
+          <dd className="mt-1 text-sm/6 text-gray-700 dark:text-gray-300 sm:col-span-2 sm:mt-0">
+            08:30 - 17:30 Asia/Bangkok
+          </dd>
+        </div>
+        <div className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+          <dt className="text-sm/6 font-medium text-gray-900 dark:text-gray-100">
+            Preferred Work Location
+          </dt>
+          <dd className="mt-1 text-sm/6 text-gray-700 dark:text-gray-300 sm:col-span-2 sm:mt-0">
+            Bangkok - On site / Hybrid
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>,
+];
+
 const App: React.FC = function () {
   return (
-    <main className="max-w-screen-2xl mx-auto xl:px-8 px-4">
-      <nav className="flex p-4 gap-6 items-center">
-        <div className="text-xl font-medium">R. Phuwanat</div>
+    <main className="max-w-screen-xl mx-auto xl:px-8 px-4">
+      <nav className="flex p-4 pb-12 gap-6 items-center">
+        <a href="/" className="text-xl font-medium">
+          R. Phuwanat
+        </a>
         <div className="flex-1"></div>
         <a href="mailto:r.phuwanat.dev@gmail.com">
           <FontAwesomeIcon
@@ -312,17 +443,19 @@ const App: React.FC = function () {
         </a>
       </nav>
       <section id="landing">
-        <div className="py-8 xl:flex-row flex flex-col items-center min-h-[calc(100vh-5.5rem)]">
+        <div className="xl:flex-row flex xl:gap-12 mx-auto flex-col items-center min-h-[calc(100vh-8.5rem)]">
           <div className="flex-1 border-l-4 pl-4 border-black dark:border-white ml-3">
-            <h1 className="text-6xl font-mono">In Code We Trust.</h1>
-            <p className="text-lg/6 py-6 max-w-xl ml-4">
+            <h1 className="text-3xl lg:text-6xl font-mono">
+              In Code We Trust.
+            </h1>
+            <p className="text-base/6 py-6 max-w-xl ml-4">
               Hi, I'm Phuwanat Rareongklin a Full-Stack Developer from Bangkok,
               Thailand, specializing in web development for both websites and
               applications. I excel at simplifying complex tasks, collaborating
               effectively in teams, and continuously learning to grow as a
               developer.
             </p>
-            <p className="text-lg/6 py-6 max-w-xl ml-4">
+            <p className="text-base/6 py-6 max-w-xl ml-4">
               I specialize in building web applications with React, TypeScript,
               and Node.js. With strong expertise in SQL Server, I can design and
               manage databases efficiently. I have experience working with both
@@ -332,7 +465,7 @@ const App: React.FC = function () {
             </p>
           </div>
           <div className="flex-1">
-            <div className="mx-auto flex max-w-xl flex-col gap-6 p-6 items-center rounded-xl border border-b-4 border-r-4 border-black dark:border-white">
+            <div className="xl:mx-auto flex max-w-xl flex-col gap-6 p-6 items-center border border-b-4 border-r-4 border-black dark:border-white">
               <div className="rounded-full border-2 border-black dark:border-white p-1">
                 <img
                   src="/profile.jpg"
@@ -352,51 +485,62 @@ const App: React.FC = function () {
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
-          <a className="animate-bounce" href="#work-experience">
+        <div className="hidden xl:flex flex-col items-center justify-center">
+          <a className="animate-bounce" href="#more">
             <FontAwesomeIcon icon={faChevronDown} className="dark:text-white" />
           </a>
         </div>
       </section>
-      <section id="work-experience">
-        <h2 className="font-medium text-3xl mb-4">Development Experience</h2>
-        <div>
-          <b>Full-Stack Developer</b>
-        </div>
-        <div className="italic">
-          TTCL Public Company Limited – [2022 - Present]
-        </div>
-        <ul className="list-disc list-inside my-2 text-base/10">
-          <li>
-            Developed and maintained web applications using{" "}
-            <b>React, TypeScript, and Node.js.</b>
-          </li>
-          <li>
-            Designed and managed relational databases with <b>SQL Server.</b>
-          </li>
-          <li>
-            Built and integrated <b>REST APIs</b> and <b>GraphQL</b> for
-            efficient data handling.
-          </li>
-          <li>
-            Worked on various <b>data management web applications</b>, ensuring
-            scalability and performance.
-          </li>
-          <li>
-            Collaborated with teams to <b>simplify complex tasks</b> and improve
-            development workflows.
-          </li>
-          <li>Strong problem-solving and debugging skills.</li>
-        </ul>
-      </section>
-      <section id="tools" className="py-8">
-        <h2 className="font-medium text-3xl mb-4">What I'm using</h2>
-        <div className="py-4 flex gap-12 items-center flex-wrap">
-          {experiences.map((item, index) => (
-            <span key={index}>{item}</span>
+      <div className="flex flex-col gap-20 py-12 lg:hidden">
+        {sections.map((section, index) => (
+          <div key={index}>{section}</div>
+        ))}
+      </div>
+      <TabGroup
+        id="more"
+        vertical
+        className={
+          "lg:flex hidden xl:flex-row flex-col-reverse pt-12 gap-4 min-h-[calc(100vh-5.5rem)] items-center"
+        }
+      >
+        <TabPanels className="flex-[0.7]">
+          {sections.map((section, index) => (
+            <TabPanel key={index} className={"max-w-screen-md"}>
+              <Transition
+                appear
+                show
+                {...{
+                  enter: "ease-out duration-500",
+                  enterFrom: "opacity-0 scale-95",
+                  enterTo: "opacity-100 scale-100",
+                  leave: "ease-in duration-200",
+                  leaveFrom: "opacity-100 scale-100",
+                  leaveTo: "opacity-0 scale-95",
+                }}
+              >
+                {section}
+              </Transition>
+            </TabPanel>
           ))}
-        </div>
-      </section>
+        </TabPanels>
+        <TabList className={"flex flex-[0.3] xl:flex-col items-start gap-2"}>
+          {[
+            "Development Experience",
+            "Technologies I Use",
+            "About Me",
+            "Contact",
+          ].map((item) => (
+            <Tab
+              key={item}
+              className={
+                "transition text-lg outline-none text-gray-500 hover:text-black dark:text-gray-400 dark:hover:text-white data-[selected]:text-black dark:data-[selected]:text-white border-b-4 border-r-4 border p-3 border-transparent data-[selected]:border-black dark:data-[selected]:border-white"
+              }
+            >
+              {item}
+            </Tab>
+          ))}
+        </TabList>
+      </TabGroup>
       <footer className="py-12 flex gap-4 items-center">
         <div className="text-lg">
           &copy; {new Date().getFullYear()} R.Phuwanat
