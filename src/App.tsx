@@ -426,21 +426,7 @@ const App: React.FC = function () {
           R. Phuwanat
         </a>
         <div className="flex-1"></div>
-        <a href="mailto:r.phuwanat.dev@gmail.com">
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            className="size-6 dark:text-white"
-          />
-        </a>
-        <a href="https://www.instagram.com/r.phuwanat/">
-          <FontAwesomeIcon
-            icon={faInstagram}
-            className="size-6 dark:text-white"
-          />
-        </a>
-        <a href="https://github.com/pwnrrk">
-          <FontAwesomeIcon icon={faGithub} className="size-6 dark:text-white" />
-        </a>
+        <a href="#more">Portfolio</a>
       </nav>
       <section id="landing">
         <div className="xl:flex-row flex xl:gap-12 mx-auto flex-col items-center min-h-[calc(100vh-8.5rem)]">
@@ -455,7 +441,7 @@ const App: React.FC = function () {
               effectively in teams, and continuously learning to grow as a
               developer.
             </p>
-            <p className="text-base/6 py-6 max-w-xl ml-4">
+            <p className="text-base/6 pb-6 max-w-xl ml-4">
               I specialize in building web applications with React, TypeScript,
               and Node.js. With strong expertise in SQL Server, I can design and
               manage databases efficiently. I have experience working with both
@@ -465,7 +451,7 @@ const App: React.FC = function () {
             </p>
           </div>
           <div className="flex-1">
-            <div className="xl:mx-auto flex max-w-xl flex-col gap-6 p-6 items-center border border-b-4 border-r-4 border-black dark:border-white">
+            <div className="xl:mx-auto relative flex max-w-xl flex-col gap-6 p-6 items-center border border-b-4 border-r-4 border-black dark:border-white">
               <div className="rounded-full border-2 border-black dark:border-white p-1">
                 <img
                   src="/profile.jpg"
@@ -473,14 +459,33 @@ const App: React.FC = function () {
                   alt=""
                 />
               </div>
-              <div>
+              <div className="text-center">
+                <span className="font-medium text-2xl">
+                  Phuwanat Rareongklin
+                </span>
                 <div>
-                  <q className="text-lg italic">
-                    If there problems, there will be more problems and I'm here
-                    to solve it.
-                  </q>
+                  <span>Full Stack Developer</span>
                 </div>
-                <span className="font-medium">Phuwanat Rareongklin</span>
+              </div>
+              <div className="flex gap-4">
+                <a href="mailto:r.phuwanat.dev@gmail.com">
+                  <FontAwesomeIcon
+                    icon={faEnvelope}
+                    className="size-6 dark:text-white"
+                  />
+                </a>
+                <a href="https://www.instagram.com/r.phuwanat/">
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    className="size-6 dark:text-white"
+                  />
+                </a>
+                <a href="https://github.com/pwnrrk">
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className="size-6 dark:text-white"
+                  />
+                </a>
               </div>
             </div>
           </div>
