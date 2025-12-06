@@ -10,7 +10,7 @@ import {
   Transition,
 } from "@headlessui/react";
 import React from "react";
-import { InstagramEmbed } from "react-social-media-embed";
+// import { InstagramEmbed } from "react-social-media-embed";
 
 const experiences = [
   <a
@@ -317,30 +317,23 @@ const sections = [
   <section id="work-experience">
     <h2 className="font-medium text-3xl mb-4">Development Experience</h2>
     <div>
+      <b>Back-End Developer</b>
+    </div>
+    <div className="italic">
+      PTT Digital Solutions Company Limited – [2025 - Present]
+    </div>
+    <ul className="list-disc list-inside my-2 text-sm/6 xl:text-base/10">
+      <li>Develop APIs with Node.js</li>
+    </ul>
+    <div>
       <b>Full-Stack Developer</b>
     </div>
-    <div className="italic">TTCL Public Company Limited – [2022 - Present]</div>
+    <div className="italic">TTCL Public Company Limited – [2022 - 2025]</div>
     <ul className="list-disc list-inside my-2 text-sm/6 xl:text-base/10">
       <li>
         Developed and maintained web applications using{" "}
         <b>React, TypeScript, and Node.js.</b>
       </li>
-      <li>
-        Designed and managed relational databases with <b>SQL Server.</b>
-      </li>
-      <li>
-        Built and integrated <b>REST APIs</b> and <b>GraphQL</b> for efficient
-        data handling.
-      </li>
-      <li>
-        Worked on various <b>data management web applications</b>, ensuring
-        scalability and performance.
-      </li>
-      <li>
-        Collaborated with teams to <b>simplify complex tasks</b> and improve
-        development workflows.
-      </li>
-      <li>Strong problem-solving and debugging skills.</li>
     </ul>
   </section>,
   <section id="tools">
@@ -363,9 +356,16 @@ const sections = [
       business logic and implement solutions efficiently, ensuring fast delivery
       and stability.
     </p>
-    <div>
+    <p className="text-lg/6 pb-6 max-w-screen-md">
+      I specialize in building web applications with React, TypeScript, and
+      Node.js. With strong expertise in SQL Server, I can design and manage
+      databases efficiently. I have experience working with both REST APIs and
+      GraphQL, and I’ve contributed to various data management web applications,
+      ensuring seamless functionality and performance.
+    </p>
+    {/* <div>
       <InstagramEmbed url="https://www.instagram.com/r.phuwanat/" />
-    </div>
+    </div> */}
   </section>,
   <section id="contact">
     <h2 className="font-medium text-3xl mb-4">Contact</h2>
@@ -436,18 +436,7 @@ const App: React.FC = function () {
             </h1>
             <p className="text-base/6 py-6 max-w-xl ml-4">
               Hi, I'm Phuwanat Rareongklin a Full-Stack Developer from Bangkok,
-              Thailand, specializing in web development for both websites and
-              applications. I excel at simplifying complex tasks, collaborating
-              effectively in teams, and continuously learning to grow as a
-              developer.
-            </p>
-            <p className="text-base/6 pb-6 max-w-xl ml-4">
-              I specialize in building web applications with React, TypeScript,
-              and Node.js. With strong expertise in SQL Server, I can design and
-              manage databases efficiently. I have experience working with both
-              REST APIs and GraphQL, and I’ve contributed to various data
-              management web applications, ensuring seamless functionality and
-              performance.
+              Thailand,
             </p>
           </div>
           <div className="flex-1">
