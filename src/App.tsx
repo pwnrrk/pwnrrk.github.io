@@ -320,20 +320,39 @@ const sections = [
       <b>Back-End Developer</b>
     </div>
     <div className="italic">
-      PTT Digital Solutions Company Limited – [2025 - Present]
+      PTT Digital Solutions Company Limited – [Jul 2025 - Jul 2026]
     </div>
     <ul className="list-disc list-inside my-2 text-sm/6 xl:text-base/10">
-      <li>Develop APIs with Node.js</li>
+      <li>Maintain and Develop API For <b>POS</b> system and others with <b>Node.js</b></li>
+      <li>
+        Develop data sync system with <b>RabbitMQ</b> Analyze and design new feature
+        based on requirements
+      </li>
+      <li>
+        Maintain and manage database with <b>MongoDB</b>. Design schemas for new
+        features
+      </li>
+      <li>Junior coaching and teammate consult.</li>
     </ul>
     <div>
       <b>Full-Stack Developer</b>
     </div>
-    <div className="italic">TTCL Public Company Limited – [2022 - 2025]</div>
+    <div className="italic">
+      TTCL Public Company Limited – [Feb 2022 - Jul 2025]
+    </div>
     <ul className="list-disc list-inside my-2 text-sm/6 xl:text-base/10">
+      <li>Analyze and design the system for internal company usage.</li>
+      <li>Develop web applications with <b>React, Node.js.</b></li>
+      <li>Design and manage database with <b>Microsoft SQL.</b></li>
       <li>
-        Developed and maintained web applications using{" "}
-        <b>React, TypeScript, and Node.js.</b>
+        Research new programming technologies for improve company development
+        workflow.
       </li>
+      <li>
+        Co-operate and receive requirement with other departments related to
+        assigned project
+      </li>
+      <li>Review team’s work and provide guidance</li>
     </ul>
   </section>,
   <section id="tools">
