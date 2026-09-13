@@ -1,5 +1,5 @@
 import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faChevronDown, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Tab,
@@ -9,7 +9,10 @@ import {
   TabPanels,
   Transition,
 } from "@headlessui/react";
-import React from "react";
+import React, { useState } from "react";
+import SlideUpImg from "./components/SlideUpImg";
+import TypingText from "./components/TypingText";
+import { useScroll, motion, useTransform } from "motion/react";
 // import { InstagramEmbed } from "react-social-media-embed";
 
 const experiences = [
@@ -317,16 +320,28 @@ const sections = [
   <section id="work-experience">
     <h2 className="font-medium text-3xl mb-4">Development Experience</h2>
     <div>
+      <b>Full-Stack Developer</b>
+    </div>
+    <div className="italic">
+      SCG Chemicals Public Company Limited – [Sep 2026 - Preset]
+    </div>
+    <ul className="list-disc list-inside my-2 text-sm/6 xl:text-base/10">
+      <li>Maintain and Develop web application using Next.js and Nest.js</li>
+    </ul>
+    <div>
       <b>Back-End Developer</b>
     </div>
     <div className="italic">
       PTT Digital Solutions Company Limited – [Jul 2025 - Jul 2026]
     </div>
     <ul className="list-disc list-inside my-2 text-sm/6 xl:text-base/10">
-      <li>Maintain and Develop API For <b>POS</b> system and others with <b>Node.js</b></li>
       <li>
-        Develop data sync system with <b>RabbitMQ</b> Analyze and design new feature
-        based on requirements
+        Maintain and Develop API For <b>POS</b> system and others with{" "}
+        <b>Node.js</b>
+      </li>
+      <li>
+        Develop data sync system with <b>RabbitMQ</b> Analyze and design new
+        feature based on requirements
       </li>
       <li>
         Maintain and manage database with <b>MongoDB</b>. Design schemas for new
@@ -342,8 +357,12 @@ const sections = [
     </div>
     <ul className="list-disc list-inside my-2 text-sm/6 xl:text-base/10">
       <li>Analyze and design the system for internal company usage.</li>
-      <li>Develop web applications with <b>React, Node.js.</b></li>
-      <li>Design and manage database with <b>Microsoft SQL.</b></li>
+      <li>
+        Develop web applications with <b>React, Node.js.</b>
+      </li>
+      <li>
+        Design and manage database with <b>Microsoft SQL.</b>
+      </li>
       <li>
         Research new programming technologies for improve company development
         workflow.
@@ -437,30 +456,78 @@ const sections = [
   </section>,
 ];
 
+const mottos = ["In Code We Trust.", "Simply Efficiency.", "I Love My JOB!"];
+
 const App: React.FC = function () {
+  const [activeMotto, setActiveMotto] = useState(0);
+  const { scrollY } = useScroll();
+  const windowHeight = window.outerHeight;
+
+  const leftRange = useTransform(scrollY, [0, windowHeight], ["0%", "-200%"]);
+
+  const rightRange = useTransform(scrollY, [0, windowHeight], ["0%", "200%"]);
+
+  const fadeOutRange = useTransform(scrollY, [0, windowHeight / 2], [1, 0]);
+
+  const nextMotto = () => {
+    setTimeout(() => {
+      setActiveMotto((old) => (old === mottos.length - 1 ? 0 : old + 1));
+    }, 3000);
+  };
+
   return (
     <main className="max-w-screen-xl mx-auto xl:px-8 px-4">
-      <nav className="flex p-4 pb-12 gap-6 items-center">
-        <a href="/" className="text-xl font-medium">
+      <nav className="flex p-4 pb-12 gap-6 items-center text-white fixed top-0 left-0 right-0">
+        <motion.a
+          href="/"
+          className="text-xl font-medium"
+          style={{ x: leftRange }}
+        >
           R. Phuwanat
-        </a>
+        </motion.a>
         <div className="flex-1"></div>
-        <a href="#more">Portfolio</a>
+        <motion.a href="#more" style={{ x: rightRange }}>
+          Portfolio
+        </motion.a>
       </nav>
-      <section id="landing">
-        <div className="xl:flex-row flex xl:gap-12 mx-auto flex-col items-center min-h-[calc(100vh-8.5rem)]">
-          <div className="flex-1 border-l-4 pl-4 border-black dark:border-white ml-3">
-            <h1 className="text-3xl lg:text-6xl font-mono">
-              In Code We Trust.
-            </h1>
+      <section id="landing" className="text-white h-screen fixed inset-0 -z-20">
+        <div className="fixed inset-0 w-screen flex -z-10 overflow-hidden">
+          <motion.div className="flex-1 relative hidden xl:block" style={{ y: leftRange }}>
+            <SlideUpImg src="/banner-1.jpg" />
+          </motion.div>
+          <motion.div
+            className="flex-1 relative z-10"
+            style={{ y: rightRange }}
+          >
+            <SlideUpImg src="/banner-3.jpg" delay={0.1} bigger />
+          </motion.div>
+          <motion.div className="flex-1 relative hidden xl:block" style={{ y: leftRange }}>
+            <SlideUpImg src="/banner-2.jpg" delay={0.05} />
+          </motion.div>
+          <motion.div
+            className="absolute inset-0 bg-black/50 z-10"
+            style={{ opacity: fadeOutRange }}
+          ></motion.div>
+        </div>
+        <div className="xl:flex-row flex xl:gap-12 mx-auto flex-col h-screen max-w-screen-xl justify-center items-center">
+          <motion.div
+            className="xl:flex-1 border-l-4 pl-4 border-white ml-4"
+            style={{ x: leftRange }}
+          >
+            <TypingText
+              text={mottos[activeMotto]}
+              as={"h1"}
+              className="text-3xl lg:text-6xl font-mono font-bold"
+              onAnimateEnd={nextMotto}
+            />
             <p className="text-base/6 py-6 max-w-xl ml-4">
               Hi, I'm Phuwanat Rareongklin a Full-Stack Developer from Bangkok,
               Thailand,
             </p>
-          </div>
-          <div className="flex-1">
-            <div className="xl:mx-auto relative flex max-w-xl flex-col gap-6 p-6 items-center border border-b-4 border-r-4 border-black dark:border-white">
-              <div className="rounded-full border-2 border-black dark:border-white p-1">
+          </motion.div>
+          <motion.div style={{ x: rightRange }}>
+            <div className="xl:mx-auto relative flex max-w-xl flex-col gap-6 p-6 items-center border-white">
+              <div className="rounded-full border-2  border-white p-1">
                 <img
                   src="/profile.jpg"
                   className="size-48 rounded-full"
@@ -496,14 +563,15 @@ const App: React.FC = function () {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="hidden xl:flex flex-col items-center justify-center">
+        {/* <div className="hidden xl:flex flex-col items-center justify-center z-20 absolute left-0 right-0 bottom-0">
           <a className="animate-bounce" href="#more">
-            <FontAwesomeIcon icon={faChevronDown} className="dark:text-white" />
+            <FontAwesomeIcon icon={faChevronDown} className="text-white" />
           </a>
-        </div>
+        </div> */}
       </section>
+      <div className="h-screen"></div>
       <div className="flex flex-col gap-20 py-12 lg:hidden">
         {sections.map((section, index) => (
           <div key={index}>{section}</div>
@@ -513,7 +581,7 @@ const App: React.FC = function () {
         id="more"
         vertical
         className={
-          "lg:flex hidden xl:flex-row flex-col-reverse pt-12 gap-4 min-h-[calc(100vh-5.5rem)] items-center"
+          "lg:flex hidden xl:flex-row flex-col-reverse pt-12 gap-4 min-h-screen items-center"
         }
       >
         <TabPanels className="flex-[0.7]">

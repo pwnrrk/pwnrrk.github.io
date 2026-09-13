@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d ./dist"
   },
   "dependencies": {
+    "@chakra-ui/react": "^3.37.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
@@ -20,6 +21,7 @@
     "date-fns": "^4.1.0",
     "geist": "^1.3.1",
     "gh-pages": "^6.3.0",
+    "motion": "^13.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-social-media-embed": "^2.5.17"
